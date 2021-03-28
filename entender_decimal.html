@@ -36,22 +36,20 @@
     
     
     <script>
+ 
         function calcular(name)
         {
             num=parseInt(document.getElementById('decimal').innerHTML);
             
+
+
             img=$('#num'+name).val();
 
-            if (img>0)
-            {
+           
+                num= num-parseInt(document.getElementById('val'+name).innerHTML);
                 document.getElementById('val'+name).innerHTML=(parseInt(name)*img);
                 num=num+(parseInt(name)*img);
-            }
-            else
-            {
-                document.getElementById('val'+name).innerHTML=(parseInt(name)*img);
-                num=num-(parseInt(name)*img);
-            }
+           
             document.getElementById('decimal').innerHTML=num;
         }
     </script>
